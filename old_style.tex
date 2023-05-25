@@ -1,0 +1,377 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[xcolor=dvipsnames, t]{beamer}
+
+\mode<presentation> {
+\usetheme{Pittsburgh}
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[frame number] % To replace the footer line in all slides with a simple slide count uncomment this line
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+\setbeamertemplate{caption}[numbered]
+}
+
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{listings}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage[natbibapa]{apacite}
+\usepackage{acro}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{framed}
+\usepackage{makecell}
+\usepackage{chngpage}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{mfirstuc}% provides \makefirstuc
+\usepackage{url}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[symbols,nogroupskip,sort=none]{glossaries-extra}
+\usepackage{animate}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+%---- APA (6th)
+\AtBeginDocument{\renewcommand{\APACrefYearMonthDay}[3]{\BBOP{#1}\BBCP}}
+
+%-----------------------------------------------------------
+% New commands
+
+% distreg.vis
+\newcommand{\class}[1]{`\code{#1}'}
+\newcommand{\fct}[1]{\code{#1()}}
+\def\inline{\lstinline[basicstyle=\ttfamily,keywordstyle={}]}
+\newcommand{\code}{\inline}
+\newcommand{\proglang}{}
+\newcommand{\pkg}{\inline}
+
+% Orthogonality Transformations
+% Own Commands
+\newcommand{\bi}{\begin{itemize}}
+	\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+	\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\items}{\smallskip\item}
+\newcommand{\itemm}{\medskip\item}
+\newcommand{\itemb}{\bigskip\item}
+
+%\renewcommand{\mu}{\alpha_1}
+%\newcommand{\Alpha}{\alpha_2}
+%\renewcommand{\xi}{\beta_1}
+%\renewcommand{\nu}{\beta_2}
+\newcommand{\loz}{\beta_{10}}
+\newcommand{\loo}{\beta_{11}}
+\newcommand{\ltz}{\beta_{20}}
+\newcommand{\lto}{\beta_{21}}
+\newcommand{\lozred}{{\color{red} \beta_{10}}}
+\newcommand{\loored}{{\color{red} \beta_{11}}}
+\newcommand{\ltzred}{{\color{red} \beta_{20}}}
+\newcommand{\ltored}{{\color{red} \beta_{21}}}
+\newcommand{\lozhat}{\hat{\beta}_{10}}
+\newcommand{\loohat}{\hat{\beta}_{11}}
+\newcommand{\ltzhat}{\hat{\beta}_{20}}
+\newcommand{\ltohat}{\hat{\beta}_{21}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Cov}{\text{Cov}}
+\newcommand{\gbox}[2]{\begin{center}\framebox{\parbox{#1}{#2}}\end{center}}
+\newcommand{\p}{\partial}
+
+% VIBE
+\newcommand{\bnum}[1]{\beta_{#1}}
+\newcommand{\bx}{\textbf{x}}
+\newcommand{\by}{\textbf{y}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bxt}{\textbf{x}^{\intercal}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bZ}{\mathbf{Z}}
+\newcommand{\ic}{\intercal}
+\newcommand{\bz}{\textbf{z}}
+\newcommand{\bXt}{\mathbf{X}^{\intercal}}
+\newcommand{\bZt}{\mathbf{Z}^{\intercal}}
+\newcommand{\bZc}{\mathbf{Z}_{c}}
+\newcommand{\bXc}{\mathbf{X}_{c}}
+\newcommand{\bZct}{\mathbf{Z}_{c}^{\intercal}}
+\newcommand{\bXct}{\mathbf{X}_{c}^{\intercal}}
+\newcommand{\bbstar}{\boldsymbol{\beta}^{*}}
+\newcommand{\bbstarhat}{\hat{\boldsymbol{\beta}}^{*}}
+\newcommand{\bbstarzero}{\boldsymbol{\beta}^{*}_{0}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\bbgamma}{\boldsymbol{\Gamma}}
+\newcommand{\var}{\text{Var}}
+\newcommand{\co}[1]{\texttt{#1}}
+\newcommand{\Ey}{\mathbb{E}(y)}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+
+
+%-----------------------------------------------------------
+\DeclareAcronym{gamlss}{short = GAMLSS, long  = {generalized additive models for location, scale and shape}, cite = {gamlss2005}}
+\DeclareAcronym{bamlss}{short = BAMLSS, long  = {Bayesian additive models for location, scale and shape}, cite = {bamlss2017}}
+\DeclareAcronym{glm}{short = GLM, long = {generalized linear models}, cite = {nelder1972}}
+\DeclareAcronym{ols}{short = OLS, long  = {ordinary least squares}}
+\DeclareAcronym{gam}{short = GAM, long  = {generalized additive models},
+	cite = {hastie1990generalized}}
+\DeclareAcronym{star}{short = STAR, long  = {structured additive regression}}
+\DeclareAcronym{wls}{short = WLS, long  = {weighted least squares}}
+\DeclareAcronym{pwls}{short = WLS, long  = {penalized weighted least squares}}
+\DeclareAcronym{irls}{short = IRLS, long  = {iteratively reweighted least squares}}
+\DeclareAcronym{rs}{short = RS, long  = {Rigby and Stasinopoulos}}
+\DeclareAcronym{cg}{short = CG, long  = {Cole and Green}}
+\DeclareAcronym{mcmc}{short = MCMC, long  = {Markov chain Monte Carlo}}
+\DeclareAcronym{iid}{short = i.i.d., long  = {independent and identically distributed}}
+\DeclareAcronym{cdf}{short = CDF, long  = {cumulative distribution function}}
+\DeclareAcronym{pdf}{short = PDF, long  = {probability density function}}
+\DeclareAcronym{gui}{short = GUI, long = {graphical user interface}}
+\DeclareAcronym{fiz}{short = FIZ, long = {Fitness- und Gesundheitszentrum}}
+\DeclareAcronym{ode}{short = ODE, long = {ordinary differential equation}}
+\DeclareAcronym{mle}{short = MLE, long = {maximum-likelihood estimate}}
+\DeclareAcronym{gamm}{short = GAMM, long = {generalized additive mixed models}, cite = {lin1999inference}}
+\DeclareAcronym{lasso}{short = LASSO, long = {least absolute shrinkage and selection operator}, cite = {lasso}}
+\DeclareAcronym{pde}{short = PDE, long = {partial differential equation}}
+\DeclareAcronym{hp}{short = HP, long = {hierarchical partitioning}}
+\DeclareAcronym{glim}{short = GLIM, long = {generalized linear interactive modelling program}, cite = {glim}}
+\DeclareAcronym{madam}{short = MADAM, long = {mean and dispersion additive models}}
+\DeclareAcronym{vgam}{short = VGAM, long = {vector generalized linear and additive models}, cite = {VGAM}}
+\DeclareAcronym{dnn}{short = DNN, long = {deep neural networks}}
+\DeclareAcronym{rw}{short = RW, long = {relative weights}}
+
+\acsetup{
+	format/list = \makefirstuc ,
+	list/name = {List of Acronyms},
+	list/heading = chapter,
+	single = false,
+	cite/cmd = \citealp,
+	cite/group = true,
+	cite/display = first,
+	cite/group/cmd = \citealp
+}
+
+%-----------------------------------------------------------
+% distreg.vis preamble
+%% thead
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+%% Define block styles - tikz
+%\usetikzlibrary{shapes,arrows}
+%\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+%text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+%\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+%text width=5em, text centered, rounded corners, minimum height=4em]
+%\tikzstyle{line} = [draw, -latex']
+%\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+%minimum height=2em]
+
+\definecolor{light-gray}{gray}{0.96}
+\definecolor{pitchblack}{cmyk}{0,0,0,1}
+\color{pitchblack}
+%-----------------------------------------------------------
+% Listings
+\lstdefinelanguage{Renhanced}[]{R}{
+	otherkeywords={!,!=,~,\$,*,\&,\%/\%,\%*\%,\%\%,<-,<<-, ::},
+	morekeywords={},
+	deletekeywords={hist, runif, plot, read.table, read, check, text, file, attributes, quote, missing, c, list, any, which, na, deparse, structure, install, model, data, sub, family},
+	alsoletter={.\%},%
+	alsoother={:_\$}}
+
+\lstset{
+	language=Renhanced,                     % the language of the code
+	basicstyle=\linespread{1.5}\ttfamily\footnotesize, % the size of the fonts that are used for the code
+	numbers=none,                   % where to put the line-numbers
+	numberstyle=\tiny\color{Blue},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it is 1, each line will be numbered
+	numbersep=10pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{light-gray},  % choose the background color. You must add \usepackage{color}
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=true,                   % adds a frame around the code
+	rulecolor=\color{white},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=false,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	keywordstyle=\color{pitchblack},      % keyword style
+	commentstyle=\color{pitchblack},   % comment style
+	stringstyle=\color{pitchblack}    % string literal style
+}
+
+%-----------------------------------------------------------
+% VIBE preamble
+% Algo comments
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
+%-----------------------------------------------------------
+% Symbols
+\glsxtrnewsymbol[description={Number of samples}]{n}{\ensuremath{n}}
+\glsxtrnewsymbol[description={Number of simulation repetitions}]{N}{\ensuremath{N}}
+\glsxtrnewsymbol[description={Number of available covariates in $\bX$}]{Q}{\ensuremath{Q}}
+\glsxtrnewsymbol[description={Number of available covariates in $\bX_k$}]{Qk}{\ensuremath{Q_k}}
+\glsxtrnewsymbol[description={Index of observations}]{i}{\ensuremath{i}}
+\glsxtrnewsymbol[description={Distributional parameters}]{theta}{\ensuremath{\theta_k}}
+\glsxtrnewsymbol[description={Distributional parameters, orthogonalized}]{epsilon}{\ensuremath{\omega_k}}
+\glsxtrnewsymbol[description={First distributional parameter, equal to $\theta_1$ (used in Chapter \ref{chap:distreg.vis} to comply with software notation)}]{mu}{\ensuremath{\mu}}
+\glsxtrnewsymbol[description={Second distributional parameter, equal to $\theta_2$ (used in Chapter \ref{chap:distreg.vis})}]{sigma}{\ensuremath{\sigma}}
+\glsxtrnewsymbol[description={Number of distributional parameters}]{K}{\ensuremath{K}}
+\glsxtrnewsymbol[description={Response, dependent variable}]{y}{\ensuremath{y}}
+\glsxtrnewsymbol[description={Matrix of explanatory covariates}]{xfull}{\ensuremath{\bX}}
+\glsxtrnewsymbol[description={Subset of $\bX$ connected to parameter $\theta_k$}]{xk}{\ensuremath{\bX_k}}
+\glsxtrnewsymbol[description={Covariate, univariate}]{xq}{\ensuremath{x_q}}
+\glsxtrnewsymbol[description={Covariate, possibly multivariate}]{bxq}{\ensuremath{\bx_{kq}}}
+\glsxtrnewsymbol[description={Vector of full regression coefficients}]{bbeta}{\ensuremath{\bbeta}}
+\glsxtrnewsymbol[description={Subset of $\bbeta$ corresponding to $\bX_k$}]{bk}{\ensuremath{\bbeta_k}}
+\glsxtrnewsymbol[description={Intercept term of parameter $\theta_k$}]{betakzero}{\ensuremath{\beta_{k0}}}
+\glsxtrnewsymbol[description={Regression coefficient of covariate $x_q$ for modeling $\theta_k$}]{betakq}{\ensuremath{\beta_{kq}}}
+\glsxtrnewsymbol[description={Regression coefficient(s) of $\bx_q$ for modeling $\theta_k$}]{bbetakq}{\ensuremath{\bbeta_{kq}}}
+\glsxtrnewsymbol[description={Covariate effect of $\bx_q$ for describing parameter $\theta_k$, possibly nonparametric}]{fkq}{\ensuremath{f_{kq}(\cdot)}}
+\glsxtrnewsymbol[description={Probability density function (PDF)}]{pdf}{\ensuremath{p(\cdot)}}
+\glsxtrnewsymbol[description={Link function to uphold support of $\theta_k$}]{g}{\ensuremath{g_k(\cdot)}}
+\glsxtrnewsymbol[description={Response function $h(\cdot) = g^{-1}(\cdot)$}]{h}{\ensuremath{h(\cdot)}}
+\glsxtrnewsymbol[description={Orthogonality function, surface}]{s}{\ensuremath{{s}(\cdot)}}
+%-----------------------------------------------------------
+
+\definecolor{mycol}{rgb}{0.31, 0.396, 0.188}
+\usecolortheme[named=mycol]{structure}
+
+\setbeamertemplate{frametitle}{%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \vphantom{g}% To avoid fluctuations per frame
+    %\hrule% Uncomment to see desired effect, without a full-width hrule
+    \par% <-- added
+    \vspace{0.15cm}
+    \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}% <-- calculation of left margin width
+    \rule[0.5\baselineskip]{\paperwidth}{0.4pt}%
+}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{\center
+	\usebeamerfont{title}\inserttitle
+	\vspace{0.2cm}
+	\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+	\vfill
+	\usebeamerfont{author}\insertauthor\par
+	\vfill
+	\vspace{0.4cm}
+	\usebeamerfont{supervisor}Thesis committee:\\ Thomas Kneib, Gillian Heller, Helmut Herwartz\par
+	\vspace{0.2cm}
+	\usebeamerfont{date}\insertdate\par
+	\vspace{0.2cm}
+	\hspace{0.3\textwidth}\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\hspace{0.3\textwidth}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Cross Skilling workshop]{Cross Skilling workshop}
+\subtitle{}
+\author[Stadlmann]{Stanislaus Stadlmann} % Your name
+\institute[] {
+	Sydney Informatics Hub \hfill University of Sydney\\
+	\vspace{0.2cm}
+\textit{stanislaus,.stadlmann@sydney.edu.au} % Your email address
+}
+\date{13.02.2023} % Date, can be changed to a custom date
+\titlegraphic{\includegraphics[width = 0.5\textwidth]{images/usyd_logo.png}}
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+
+\begin{frame}
+	\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+	\tableofcontents 
+\end{frame}
+
+%------------------------------------------------
+\section{Introduction to distributional regression models}
+%------------------------------------------------
+
+\begin{frame}{Introduction to distributional regression}
+	\textbf{Overview} \\
+	Let $y \sim D(\theta_1, \ldots, \theta_K)$. With distributional regression...
+	\begin{itemize}
+		\item Every parameter $\theta_k$ can be modeled using a (different) set of predictors
+		\item Predictors can take different forms, e.g. non-linear, spatial, random effects
+		\item Parameters are connected to the predictors using response functions that uphold the support of the parameter
+	\end{itemize}
+	\textbf{Model Equations} \\
+	$\Rightarrow$ This allows for extremely flexible model equations:
+\begin{equation*}
+	\label{eq:distregeq}
+	\begin{split}
+		h_k(\theta_k) = \beta_{k0} + \sum\limits^{Q_k}_{q = 1} f_{kq}(\bx_{kq}; \bbeta_{kq}) \\
+	\end{split}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Why do you need distributional regression?}
+	\textbf{Motivation} \\
+	$\boldsymbol{\Rightarrow}$ Interested in modeling parameters beyond the mean.
+	\pause
+	\begin{figure}
+		\begin{centering}
+			\includegraphics[scale = 0.6, trim = {0cm 0.5cm 0cm 0cm }]{images/030_wage_plot.pdf}
+			\caption{Kernel density estimates for wages split up by education level, from the Mid-atlantic region of the US \citep{ISLR}.}
+			\label{wage_density}
+		\end{centering}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}[c]{Thank you}
+	\centering
+	Thank you!
+\end{frame}
+
+\begin{frame}<beamer:0>
+  \bibliography{98_references}
+  \bibliographystyle{apacite}
+\end{frame}
+
+\end{document}
