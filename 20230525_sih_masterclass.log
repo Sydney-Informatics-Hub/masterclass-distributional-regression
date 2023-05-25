@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.7)  25 MAY 2023 12:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.7)  25 MAY 2023 12:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1603,16 +1603,37 @@ Package pdftex.def Info: images/distreg.vis.png  used on input line 507.
 (pdftex.def)             Requested size: 307.28987pt x 141.29314pt.
  [39
 
- <./images/distreg.vis.png>] [40
+ <./images/distreg.vis.png>]
+<images/URL.png, id=439, 367.3725pt x 367.3725pt>
+File: images/URL.png Graphic file (type png)
+<use images/URL.png>
+Package pdftex.def Info: images/URL.png  used on input line 513.
+(pdftex.def)             Requested size: 245.83282pt x 245.83557pt.
 
-] [41
+Overfull \vbox (14.11557pt too high) detected at line 513
+ []
 
-] (./20230525_sih_masterclass.bbl) [42
+[40
 
-] [43
+ <./images/URL.png>]
+File: images/URL.png Graphic file (type png)
+<use images/URL.png>
+Package pdftex.def Info: images/URL.png  used on input line 519.
+(pdftex.def)             Requested size: 245.83282pt x 245.83557pt.
 
+Overfull \vbox (12.47203pt too high) detected at line 519
+ []
+
+[41
+
+] [42
+
+] (./20230525_sih_masterclass.bbl) [43
 
 ] [44
+
+
+] [45
 
 
 ]
@@ -1630,18 +1651,18 @@ Package rerunfilecheck Info: File `20230525_sih_masterclass.out' has not changed
 (rerunfilecheck)             Checksum: 95EA1722C9219D3FA33C6CF5E206109B;755.
  ) 
 Here is how much of TeX's memory you used:
- 49405 strings out of 478268
- 1048525 string characters out of 5846348
+ 49416 strings out of 478268
+ 1048684 string characters out of 5846348
  1418856 words of memory out of 5000000
- 66591 multiletter control sequences out of 15000+600000
- 500605 words of font info for 90 fonts, out of 8000000 for 9000
+ 66599 multiletter control sequences out of 15000+600000
+ 500606 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,12n,131p,1407b,1355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on 20230525_sih_masterclass.pdf (44 pages, 4731617 bytes).
+Output written on 20230525_sih_masterclass.pdf (45 pages, 4735443 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
- 105 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 399 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

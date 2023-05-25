@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex 20230525_sih_masterclass"] 1684980521 "20230525_sih_masterclass.aux" "20230525_sih_masterclass.bbl" "20230525_sih_masterclass" 1684980524
+["bibtex 20230525_sih_masterclass"] 1684981394 "20230525_sih_masterclass.aux" "20230525_sih_masterclass.bbl" "20230525_sih_masterclass" 1684981470
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "20230525_sih_masterclass.aux" 1684980524 9796 728e99feae34d2854e1778bf926d4798 "pdflatex"
+  "20230525_sih_masterclass.aux" 1684981470 9925 21db68fee360af604b166add9d7891d7 "pdflatex"
   "98_references.bib" 1684291396 39703 3489474af4f53b26eb84f9c5fa6eb492 ""
   (generated)
   "20230525_sih_masterclass.bbl"
   "20230525_sih_masterclass.blg"
-["pdflatex"] 1684980521 "/Users/stani/Library/CloudStorage/OneDrive-SharedLibraries-TheUniversityofSydney(Staff)/Sydney Informatics Hub - Documents/1 SIH Central Document Repository/Training/Outreach/SIH Masterclasses/Distributional Regression/01_pres_files/20230525_sih_masterclass.tex" "20230525_sih_masterclass.pdf" "20230525_sih_masterclass" 1684980524
-  "/Users/stani/Library/CloudStorage/OneDrive-SharedLibraries-TheUniversityofSydney(Staff)/Sydney Informatics Hub - Documents/1 SIH Central Document Repository/Training/Outreach/SIH Masterclasses/Distributional Regression/01_pres_files/20230525_sih_masterclass.tex" 1684980351 15903 7b7028a504cf84cf8058283edf7132d3 ""
+["pdflatex"] 1684981467 "/Users/stani/Library/CloudStorage/OneDrive-SharedLibraries-TheUniversityofSydney(Staff)/Sydney Informatics Hub - Documents/1 SIH Central Document Repository/Training/Outreach/SIH Masterclasses/Distributional Regression/01_pres_files/20230525_sih_masterclass.tex" "20230525_sih_masterclass.pdf" "20230525_sih_masterclass" 1684981470
+  "/Users/stani/Library/CloudStorage/OneDrive-SharedLibraries-TheUniversityofSydney(Staff)/Sydney Informatics Hub - Documents/1 SIH Central Document Repository/Training/Outreach/SIH Masterclasses/Distributional Regression/01_pres_files/20230525_sih_masterclass.tex" 1684981467 16084 409e9c86172ec2770b0781d52ed847a6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -339,16 +339,17 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1675740050 2826430 1dc1e8aa145a720965f6f89d355d1aca ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "20230525_sih_masterclass.aux" 1684980524 9796 728e99feae34d2854e1778bf926d4798 "pdflatex"
-  "20230525_sih_masterclass.bbl" 1684980521 7475 66e2173b5ec1082bd3e652e4d7d59912 "bibtex 20230525_sih_masterclass"
-  "20230525_sih_masterclass.nav" 1684980524 4859 3419376925ecd2ec7c487171beb9c4dc "pdflatex"
-  "20230525_sih_masterclass.out" 1684980524 755 95ea1722c9219d3fa33c6cf5e206109b "pdflatex"
-  "20230525_sih_masterclass.tex" 1684980351 15903 7b7028a504cf84cf8058283edf7132d3 ""
-  "20230525_sih_masterclass.toc" 1684980524 205 0bbd196cb24b15983e7c7915dbdbb6d6 "pdflatex"
+  "20230525_sih_masterclass.aux" 1684981470 9925 21db68fee360af604b166add9d7891d7 "pdflatex"
+  "20230525_sih_masterclass.bbl" 1684981395 7475 66e2173b5ec1082bd3e652e4d7d59912 "bibtex 20230525_sih_masterclass"
+  "20230525_sih_masterclass.nav" 1684981470 4952 b799fd724f63f1d65f0be7f7794fe666 "pdflatex"
+  "20230525_sih_masterclass.out" 1684981470 755 95ea1722c9219d3fa33c6cf5e206109b "pdflatex"
+  "20230525_sih_masterclass.tex" 1684981467 16084 409e9c86172ec2770b0781d52ed847a6 ""
+  "20230525_sih_masterclass.toc" 1684981470 205 0bbd196cb24b15983e7c7915dbdbb6d6 "pdflatex"
   "beamercolorthemeusyd2016.sty" 1676187652 2491 57a7b3e8061e2ba166b81e4a9c755372 ""
   "beamerfontthemeusyd2016.sty" 1676187652 2231 d4502e540c918348ce1401cb094f0909 ""
   "beamerinnerthemeusyd2016.sty" 1676187652 4026 c28b91346b17ca89d2d09171888e7eba ""
   "beamerthemeusyd2016.sty" 1676187652 2274 cc258aa8a599e085fa566c7f2c3a7d17 ""
+  "images/URL.png" 1684981301 1002 b7c0a5c3b3057224183926b0a9cad121 ""
   "images/code_gamlss1.png" 1684221132 69690 2505d495438b4840e918f51809f68bdb ""
   "images/code_gamlss2.png" 1684290116 121522 999fcd659abe920a27279f670a868499 ""
   "images/distreg.vis.png" 1684291907 72228 1df395ce29e8f39d1e6f1e0b9fdbb75a ""
